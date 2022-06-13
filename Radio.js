@@ -1,9 +1,13 @@
 import React from 'react';
-import { Modal, TouchableNativeFeedback, View } from 'react-native';
-import Styles from '../../../../Styles';
+import { View } from 'react-native';
 
 const Radio = (props) => {
-    color = props.selected ? Styles.themeColor.color : '#999';
+
+    if (props.selected) {
+        color = props.selectedColor ? props.selectedColor : 'blue';
+    } else {
+        color = '#999'
+    }
 
     return (
         <View style={[{
