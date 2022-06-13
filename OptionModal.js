@@ -35,22 +35,20 @@ const OptionModal = (props) => {
                         {props.title}
                     </Text>
                     {props.options.map(item => <TouchableWithoutFeedback key={item.id} onPress={() => selectItem(item)}>
-                        <View>
-                            <View style={{ padding: 15, flexDirection: 'row' }}>
-                                <Radio
-                                    selected={props.selected == item.id}
-                                    style={props.radioStyle}
-                                    selectedColor={props.selectedColor}
-                                />
-                                <View style={{ marginLeft: 15, paddingRight: 25 }}>
-                                    <Text style={{ fontSize: 17, ...props.textStyles }}>
-                                        {item.text}
-                                    </Text>
-                                </View>
+                        <View style={{ padding: 15, flexDirection: 'row' }}>
+                            <Radio
+                                selected={props.selected == item.id}
+                                style={props.radioStyle}
+                                selectedColor={props.selectedColor}
+                            />
+                            <View style={{ marginLeft: 15, paddingRight: 25 }}>
+                                <Text style={{ fontSize: 17, ...props.textStyles }}>
+                                    {item.text}
+                                </Text>
                             </View>
                         </View>
                     </TouchableWithoutFeedback>)}
-                    
+
                 </View>
             </View>
         </Modal>
