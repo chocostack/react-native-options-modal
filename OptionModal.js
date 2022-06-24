@@ -12,8 +12,7 @@ const OptionModal = (props) => {
         props.toggleModal();
     }
 
-    return (
-        <Modal
+    return <Modal
             transparent={true}
             visible={props.isVisible}
             onRequestClose={props.toggleModal}>
@@ -51,8 +50,7 @@ const OptionModal = (props) => {
 
                 </View>
             </View>
-        </Modal>
-    );
+        </Modal>;
 };
 
 export default OptionModal;
